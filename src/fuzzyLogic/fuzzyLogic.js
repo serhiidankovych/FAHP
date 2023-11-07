@@ -26,24 +26,6 @@ function calculateGeometricMeans(criteriaMatrix) {
   return geometricMeans;
 }
 
-// function calculateAlternativesGeometricMeans(alternativesMatrix) {
-//   const geometricMeans = [];
-
-//   const transposedMatrix = transposeArray(alternativesMatrix);
-
-//   transposedMatrix.forEach((comparisonValues) => {
-//     const multipledComparisonValues = multiplyArrayElements(comparisonValues);
-//     console.log(comparisonValues);
-//     const powedComparisonValues = Math.pow(
-//       multipledComparisonValues,
-//       1 / comparisonValues.length
-//     );
-//     geometricMeans.push(powedComparisonValues);
-//     console.log("__________");
-//   });
-
-//   return geometricMeans;
-// }
 function calculateVectorSummation(geometricMeans) {
   const transposedMatrix = transposeArray(Object.values(geometricMeans));
   const vectorSummation = [];
@@ -90,12 +72,28 @@ function normalizeWeight(defuzzificatedValues) {
   return normalizedWeights;
 }
 
+function calculateAlternativeScores(
+  alternativesNormalizedWeights,
+  criteriaNormalizedWeights
+) {
+  const transposedMatrix = transposeArray(
+    Object.values(alternativesNormalizedWeights)
+  );
+  const alternativeScores = transposedMatrix.map((criteria) => {
+    return criteria.reduce((sum, score, index) => {
+      return sum + score * criteriaNormalizedWeights[index];
+    }, 0);
+  });
+
+  return alternativeScores;
+}
+
 module.exports = {
   calculateGeometricMeans,
-
   calculateVectorSummation,
   calculateInversionVector,
   calculateFuzzyWeights,
   useCentreOfAreaMethod,
   normalizeWeight,
+  calculateAlternativeScores,
 };
