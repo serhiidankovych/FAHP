@@ -1,0 +1,16 @@
+{
+  "name": "FAHP",
+  "version": "1.0.0",
+  "description": "A library for Fuzzy Analytic Hierarchy Process (FAHP) implementation in JavaScript.",
+  "main": "src/FAHP.js",
+  "scripts": {},
+  "keywords": [
+    "fuzzy",
+    "analytic hierarchy process",
+    "fahp",
+    "decision making",
+    "javascript"
+  ],
+  "author": "Serhii Dankovych",
+  "license": "MIT"
+}
