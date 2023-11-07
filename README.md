@@ -8,7 +8,7 @@ This repository contains a JavaScript implementation of the Fuzzy Analytic Hiera
 
 ### Here's an example of how to use the FuzzyAHP library in your project:
 
-```
+```javascript
 const { criteriaMatrix } = require("./dataExamples/criteriaMatrix.js");
 const { alternativesMatrix } = require("./dataExamples/alternativesMatrix.js");
 const { fuzzyAHP } = require("./fuzzyAHP/fuzzyAHP.js");
@@ -27,7 +27,7 @@ console.log(results);
 |  C4            | (1, 1, 1)         | (2, 3, 4)         | (4, 5, 6)         | (1, 1, 1)         | (1/3, 1/2, 1/1)   |
 |  C5    | (1, 2, 3)         | (1, 1, 1)         | (2, 3, 4)         | (1, 2, 3)         | (1, 1, 1)         |
 
-```
+```javascript
 const criteriaMatrix = {
   C1: [
     [1, 1, 1],
@@ -49,7 +49,7 @@ const criteriaMatrix = {
 | A2 | (1/3, 1/2, 1/1)   | (1, 1, 1)         | (2, 3, 4)         |
 | A3 | (1/5, 1/4, 1/3)   | (1/4, 1/3, 1/2)   | (1, 1, 1)         |
 
-```
+```javascript
 const alternativesMatrix = {
   C1: {
     A1: [
@@ -70,7 +70,7 @@ const alternativesMatrix = {
 
 ### Result of fuzzyAHP
 
-```
+```javascript
 {
   criteriaNormalizedWeights: [
     0.2534073392477892,
