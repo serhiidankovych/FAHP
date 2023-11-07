@@ -42,8 +42,9 @@ const criteriaMatrix = {
 ```
 
 ### Pair wise comparison matrix of the alternatives(A1,A2,A3...) by criteria (C1,C2,C3,C4,C5...)
+The pair wise comparison matrix of the alternatives by the criterion C1
 
-| Company   | A1      | A2      | A3      |
+| A/A  | A1      | A2      | A3      |
 |-----------|-------------------|-------------------|-------------------|
 | A1 | (1, 1, 1)         | (1, 2, 3)         | (3, 4, 5)         |
 | A2 | (1/3, 1/2, 1/1)   | (1, 1, 1)         | (2, 3, 4)         |
